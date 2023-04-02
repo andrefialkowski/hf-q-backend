@@ -1,11 +1,11 @@
-name: Hackaton test & deploy
-run-name: ${{ github.actor }} is testing out GitHub Actions🚀
+name: Build Gradle project
+run-name: Build and test workflow
 on:
-  workflow_dispatch:
-  push:
-    branches:
-      - develop
-  pull_request:
+    push:
+    pull_request:
+        types:
+            - opened
+            - edited
 jobs:
   build:
     name: Build
